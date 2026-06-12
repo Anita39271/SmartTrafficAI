@@ -1,0 +1,179 @@
+0 verbose cli c:\Program Files\nodejs\node.exe c:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.13.0
+2 info using node@v24.16.0
+3 silly config load:file:c:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\anita\Documents\Codex\2026-06-11\files-mentioned-by-the-user-build\backend\.npmrc
+5 silly config load:file:C:\Users\anita\.npmrc
+6 silly config load:file:C:\Users\anita\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install
+8 verbose argv "install" "--cache" ".\\.npm-cache"
+9 verbose logfile logs-max:10 dir:C:\Users\anita\Documents\Codex\2026-06-11\files-mentioned-by-the-user-build\backend\.npm-cache\_logs\2026-06-11T10_58_30_816Z-
+10 verbose logfile C:\Users\anita\Documents\Codex\2026-06-11\files-mentioned-by-the-user-build\backend\.npm-cache\_logs\2026-06-11T10_58_30_816Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:2348810240 maxSize:587202560 maxEntrySize:293601280
+13 silly idealTree buildDeps
+14 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: node_modules/prisma
+15 silly reify moves {}
+16 silly audit bulk request {
+16 silly audit   '@prisma/client': [ '6.19.3' ],
+16 silly audit   '@prisma/config': [ '6.19.3' ],
+16 silly audit   '@prisma/debug': [ '6.19.3' ],
+16 silly audit   '@prisma/engines': [ '6.19.3' ],
+16 silly audit   '@prisma/engines-version': [ '7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7' ],
+16 silly audit   '@prisma/fetch-engine': [ '6.19.3' ],
+16 silly audit   '@prisma/get-platform': [ '6.19.3' ],
+16 silly audit   '@standard-schema/spec': [ '1.1.0' ],
+16 silly audit   accepts: [ '2.0.0' ],
+16 silly audit   anymatch: [ '3.1.3' ],
+16 silly audit   'balanced-match': [ '4.0.4' ],
+16 silly audit   bcrypt: [ '6.0.0' ],
+16 silly audit   'binary-extensions': [ '2.3.0' ],
+16 silly audit   'body-parser': [ '2.2.2' ],
+16 silly audit   'brace-expansion': [ '5.0.6' ],
+16 silly audit   braces: [ '3.0.3' ],
+16 silly audit   'buffer-equal-constant-time': [ '1.0.1' ],
+16 silly audit   bytes: [ '3.1.2' ],
+16 silly audit   c12: [ '3.1.0' ],
+16 silly audit   chokidar: [ '4.0.3', '3.6.0' ],
+16 silly audit   dotenv: [ '16.6.1', '17.4.2' ],
+16 silly audit   readdirp: [ '4.1.2', '3.6.0' ],
+16 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+16 silly audit   'call-bound': [ '1.0.4' ],
+16 silly audit   citty: [ '0.1.6', '0.2.2' ],
+16 silly audit   confbox: [ '0.2.4' ],
+16 silly audit   consola: [ '3.4.2' ],
+16 silly audit   'content-disposition': [ '1.1.0' ],
+16 silly audit   'content-type': [ '1.0.5', '2.0.0' ],
+16 silly audit   cookie: [ '0.7.2' ],
+16 silly audit   'cookie-signature': [ '1.2.2' ],
+16 silly audit   cors: [ '2.8.6' ],
+16 silly audit   debug: [ '4.4.3' ],
+16 silly audit   'deepmerge-ts': [ '7.1.5' ],
+16 silly audit   defu: [ '6.1.7' ],
+16 silly audit   depd: [ '2.0.0' ],
+16 silly audit   destr: [ '2.0.5' ],
+16 silly audit   'dunder-proto': [ '1.0.1' ],
+16 silly audit   'ecdsa-sig-formatter': [ '1.0.11' ],
+16 silly audit   'ee-first': [ '1.1.1' ],
+16 silly audit   effect: [ '3.21.0' ],
+16 silly audit   empathic: [ '2.0.0' ],
+16 silly audit   encodeurl: [ '2.0.0' ],
+16 silly audit   'es-define-property': [ '1.0.1' ],
+16 silly audit   'es-errors': [ '1.3.0' ],
+16 silly audit   'es-object-atoms': [ '1.1.2' ],
+16 silly audit   'escape-html': [ '1.0.3' ],
+16 silly audit   etag: [ '1.8.1' ],
+16 silly audit   express: [ '5.2.1' ],
+16 silly audit   exsolve: [ '1.0.8' ],
+16 silly audit   'fast-check': [ '3.23.2' ],
+16 silly audit   'fill-range': [ '7.1.1' ],
+16 silly audit   finalhandler: [ '2.1.1' ],
+16 silly audit   forwarded: [ '0.2.0' ],
+16 silly audit   fresh: [ '2.0.0' ],
+16 silly audit   fsevents: [ '2.3.3' ],
+16 silly audit   'function-bind': [ '1.1.2' ],
+16 silly audit   'get-intrinsic': [ '1.3.0' ],
+16 silly audit   'get-proto': [ '1.0.1' ],
+16 silly audit   giget: [ '2.0.0' ],
+16 silly audit   'glob-parent': [ '5.1.2' ],
+16 silly audit   gopd: [ '1.2.0' ],
+16 silly audit   'has-flag': [ '3.0.0' ],
+16 silly audit   'has-symbols': [ '1.1.0' ],
+16 silly audit   hasown: [ '2.0.4' ],
+16 silly audit   'http-errors': [ '2.0.1' ],
+16 silly audit   'iconv-lite': [ '0.7.2' ],
+16 silly audit   'ignore-by-default': [ '1.0.1' ],
+16 silly audit   inherits: [ '2.0.4' ],
+16 silly audit   'ipaddr.js': [ '1.9.1' ],
+16 silly audit   'is-binary-path': [ '2.1.0' ],
+16 silly audit   'is-extglob': [ '2.1.1' ],
+16 silly audit   'is-glob': [ '4.0.3' ],
+16 silly audit   'is-number': [ '7.0.0' ],
+16 silly audit   'is-promise': [ '4.0.0' ],
+16 silly audit   jiti: [ '2.7.0' ],
+16 silly audit   jsonwebtoken: [ '9.0.3' ],
+16 silly audit   jwa: [ '2.0.1' ],
+16 silly audit   jws: [ '4.0.1' ],
+16 silly audit   'lodash.includes': [ '4.3.0' ],
+16 silly audit   'lodash.isboolean': [ '3.0.3' ],
+16 silly audit   'lodash.isinteger': [ '4.0.4' ],
+16 silly audit   'lodash.isnumber': [ '3.0.3' ],
+16 silly audit   'lodash.isplainobject': [ '4.0.6' ],
+16 silly audit   'lodash.isstring': [ '4.0.1' ],
+16 silly audit   'lodash.once': [ '4.1.1' ],
+16 silly audit   'math-intrinsics': [ '1.1.0' ],
+16 silly audit   'media-typer': [ '1.1.0' ],
+16 silly audit   'merge-descriptors': [ '2.0.0' ],
+16 silly audit   'mime-db': [ '1.54.0' ],
+16 silly audit   'mime-types': [ '3.0.2' ],
+16 silly audit   minimatch: [ '10.2.5' ],
+16 silly audit   ms: [ '2.1.3' ],
+16 silly audit   negotiator: [ '1.0.0' ],
+16 silly audit   'node-addon-api': [ '8.8.0' ],
+16 silly audit   'node-fetch-native': [ '1.6.7' ],
+16 silly audit   'node-gyp-build': [ '4.8.4' ],
+16 silly audit   nodemon: [ '3.1.14' ],
+16 silly audit   'normalize-path': [ '3.0.0' ],
+16 silly audit   nypm: [ '0.6.7' ],
+16 silly audit   'object-assign': [ '4.1.1' ],
+16 silly audit   'object-inspect': [ '1.13.4' ],
+16 silly audit   ohash: [ '2.0.11' ],
+16 silly audit   'on-finished': [ '2.4.1' ],
+16 silly audit   once: [ '1.4.0' ],
+16 silly audit   parseurl: [ '1.3.3' ],
+16 silly audit   'path-to-regexp': [ '8.4.2' ],
+16 silly audit   pathe: [ '2.0.3' ],
+16 silly audit   'perfect-debounce': [ '1.0.0' ],
+16 silly audit   picomatch: [ '2.3.2' ],
+16 silly audit   'pkg-types': [ '2.3.1' ],
+16 silly audit   prisma: [ '6.19.3' ],
+16 silly audit   'proxy-addr': [ '2.0.7' ],
+16 silly audit   'pstree.remy': [ '1.1.8' ],
+16 silly audit   'pure-rand': [ '6.1.0' ],
+16 silly audit   qs: [ '6.15.2' ],
+16 silly audit   'range-parser': [ '1.2.1' ],
+16 silly audit   'raw-body': [ '3.0.2' ],
+16 silly audit   rc9: [ '2.1.2' ],
+16 silly audit   router: [ '2.2.0' ],
+16 silly audit   'safe-buffer': [ '5.2.1' ],
+16 silly audit   'safer-buffer': [ '2.1.2' ],
+16 silly audit   semver: [ '7.8.4' ],
+16 silly audit   send: [ '1.2.1' ],
+16 silly audit   'serve-static': [ '2.2.1' ],
+16 silly audit   setprototypeof: [ '1.2.0' ],
+16 silly audit   'side-channel': [ '1.1.1' ],
+16 silly audit   'side-channel-list': [ '1.0.1' ],
+16 silly audit   'side-channel-map': [ '1.0.1' ],
+16 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+16 silly audit   'simple-update-notifier': [ '2.0.0' ],
+16 silly audit   statuses: [ '2.0.2' ],
+16 silly audit   'supports-color': [ '5.5.0' ],
+16 silly audit   tinyexec: [ '1.2.4' ],
+16 silly audit   'to-regex-range': [ '5.0.1' ],
+16 silly audit   toidentifier: [ '1.0.1' ],
+16 silly audit   touch: [ '3.1.1' ],
+16 silly audit   'type-is': [ '2.1.0' ],
+16 silly audit   undefsafe: [ '2.0.5' ],
+16 silly audit   unpipe: [ '1.0.0' ],
+16 silly audit   vary: [ '1.1.2' ],
+16 silly audit   wrappy: [ '1.0.2' ]
+16 silly audit }
+17 verbose audit error FetchError: request to https://registry.npmjs.org/-/npm/v1/security/advisories/bulk failed, reason: 
+17 verbose audit error     at ClientRequest.<anonymous> (c:\Program Files\nodejs\node_modules\npm\node_modules\minipass-fetch\lib\index.js:130:14)
+17 verbose audit error     at ClientRequest.emit (node:events:509:28)
+17 verbose audit error     at emitErrorEvent (node:_http_client:109:11)
+17 verbose audit error     at _destroy (node:_http_client:993:9)
+17 verbose audit error     at onSocketNT (node:_http_client:1014:5)
+17 verbose audit error     at process.processTicksAndRejections (node:internal/process/task_queues:91:21) {
+17 verbose audit error   code: 'EACCES',
+17 verbose audit error   errno: 'EACCES',
+17 verbose audit error   type: 'system'
+17 verbose audit error }
+18 silly audit error undefined
+19 silly audit report null
+20 verbose cwd C:\Users\anita\Documents\Codex\2026-06-11\files-mentioned-by-the-user-build\backend
+21 verbose os Windows_NT 10.0.26200
+22 verbose node v24.16.0
+23 verbose npm  v11.13.0
+24 verbose exit 0
+25 info ok

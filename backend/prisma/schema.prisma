@@ -1,0 +1,203 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  user
+  admin
+  super_admin
+}
+
+enum IncidentType {
+  crash
+  roadwork
+  congestion
+  flooding
+  event
+  hazard
+}
+
+enum Severity {
+  low
+  medium
+  high
+  severe
+}
+
+model User {
+  id                String             @id @default(cuid())
+  full_name         String
+  email             String             @unique
+  password_hash     String
+  role              UserRole           @default(user)
+  phone             String?
+  address           String?
+  profile_photo     String?
+  created_at        DateTime           @default(now())
+  updated_at        DateTime           @updatedAt
+  predictions       RoutePrediction[]
+  saved_routes      SavedRoute[]
+  settings          UserSettings?
+  uploaded_events   Incident[]         @relation("IncidentUploader")
+  admin_logs        AdminLog[]         @relation("AdminLogs")
+  modelTrainingRuns ModelTrainingRun[]
+
+  @@map("users")
+}
+
+model TrafficData {
+  id               String   @id @default(cuid())
+  road_name        String
+  location         String
+  latitude         Float?
+  longitude        Float?
+  traffic_volume   Int?
+  average_speed    Float?
+  congestion_level String
+  date             DateTime
+  time             String
+  source           String
+  created_at       DateTime @default(now())
+  updated_at       DateTime @updatedAt
+
+  @@map("traffic_data")
+}
+
+model HistoricalTrafficData {
+  id               String   @id @default(cuid())
+  road_name        String
+  suburb           String
+  latitude         Float?
+  longitude        Float?
+  date             DateTime
+  day_of_week      String
+  time             String
+  traffic_volume   Int
+  average_speed    Float
+  congestion_level String
+  incident_count   Int      @default(0)
+  roadwork_active  Boolean  @default(false)
+  weather          String?
+  source           String
+  created_at       DateTime @default(now())
+  updated_at       DateTime @updatedAt
+
+  @@map("historical_traffic_data")
+}
+
+model Incident {
+  id                   String       @id @default(cuid())
+  external_id          String?
+  incident_type        IncidentType
+  road_name            String
+  description          String
+  latitude             Float?
+  longitude            Float?
+  severity             Severity
+  start_date           DateTime
+  end_date             DateTime?
+  status               String
+  source               String
+  raw_data             Json?
+  uploaded_by_admin_id String?
+  uploaded_by_admin    User?        @relation("IncidentUploader", fields: [uploaded_by_admin_id], references: [id], onDelete: SetNull)
+  created_at           DateTime     @default(now())
+  updated_at           DateTime     @updatedAt
+
+  @@map("incidents")
+}
+
+model RoutePrediction {
+  id                    String   @id @default(cuid())
+  user_id               String
+  user                  User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  source_location       String
+  destination_location  String
+  source_latitude       Float?
+  source_longitude      Float?
+  destination_latitude  Float?
+  destination_longitude Float?
+  travel_date           DateTime
+  travel_time           String
+  transport_mode        String   @default("car")
+  selected_route        String?
+  predicted_congestion  String
+  recommended_route     String
+  estimated_travel_time String?
+  estimated_delay       String
+  confidence_score      Int
+  risk_reason           String
+  route_colour          String?
+  route_geometry        Json?
+  created_at            DateTime @default(now())
+
+  @@map("route_predictions")
+}
+
+model SavedRoute {
+  id                    String    @id @default(cuid())
+  user_id               String
+  user                  User      @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  route_name            String
+  source_location       String
+  destination_location  String
+  source_latitude       Float?
+  source_longitude      Float?
+  destination_latitude  Float?
+  destination_longitude Float?
+  travel_date           DateTime?
+  travel_time           String?
+  route_geometry        Json?
+  distance_km           Float?
+  estimated_duration    String?
+  ai_prediction_result  Json?
+  created_at            DateTime  @default(now())
+
+  @@map("saved_routes")
+}
+
+model UserSettings {
+  id                    String   @id @default(cuid())
+  user_id               String   @unique
+  user                  User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  theme                 String   @default("light")
+  notifications_enabled Boolean  @default(true)
+  location_permission   Boolean  @default(false)
+  save_history          Boolean  @default(true)
+  data_consent          Boolean  @default(true)
+  created_at            DateTime @default(now())
+  updated_at            DateTime @updatedAt
+
+  @@map("user_settings")
+}
+
+model AdminLog {
+  id         String   @id @default(cuid())
+  admin_id   String?
+  admin      User?    @relation("AdminLogs", fields: [admin_id], references: [id], onDelete: SetNull)
+  action     String
+  details    String
+  created_at DateTime @default(now())
+
+  @@map("admin_logs")
+}
+
+model ModelTrainingRun {
+  id                  String    @id @default(cuid())
+  model_name          String
+  records_used        Int       @default(0)
+  accuracy_score      Float?
+  trained_by_admin_id String?
+  trained_by_admin    User?     @relation(fields: [trained_by_admin_id], references: [id], onDelete: SetNull)
+  status              String
+  started_at          DateTime  @default(now())
+  completed_at        DateTime?
+  model_file_path     String?
+
+  @@map("model_training_runs")
+}

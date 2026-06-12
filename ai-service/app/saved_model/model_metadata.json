@@ -1,0 +1,10 @@
+{
+  "trained_at": "2026-06-12T04:16:09.856967+00:00",
+  "accuracy": 1.0,
+  "accuracy_score": 1.0,
+  "records_used": 32,
+  "model_path": "C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\ai-service\\app\\saved_model\\traffic_model.joblib",
+  "model_file_path": "C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\ai-service\\app\\saved_model\\traffic_model.joblib",
+  "model_name": "random_forest_traffic_model",
+  "model_status": "development/sample-data model"
+}

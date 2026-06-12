@@ -1,0 +1,840 @@
+0 verbose cli c:\Program Files\nodejs\node.exe c:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.13.0
+2 info using node@v24.16.0
+3 silly config load:file:c:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\anita\Documents\Codex\2026-06-11\files-mentioned-by-the-user-build\backend\.npmrc
+5 silly config load:file:C:\Users\anita\.npmrc
+6 silly config load:file:C:\Users\anita\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install
+8 verbose argv "install" "--cache" ".\\.npm-cache"
+9 verbose logfile logs-max:10 dir:C:\Users\anita\Documents\Codex\2026-06-11\files-mentioned-by-the-user-build\backend\.npm-cache\_logs\2026-06-11T10_03_00_960Z-
+10 verbose logfile C:\Users\anita\Documents\Codex\2026-06-11\files-mentioned-by-the-user-build\backend\.npm-cache\_logs\2026-06-11T10_03_00_960Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:2348810240 maxSize:587202560 maxEntrySize:293601280
+13 silly idealTree buildDeps
+14 silly fetch manifest @prisma/client@^6.19.0
+15 silly packumentCache full:https://registry.npmjs.org/@prisma%2fclient cache-miss
+16 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: node_modules
+17 http cache https://registry.npmjs.org/@prisma%2fclient 199ms (cache hit)
+18 silly packumentCache full:https://registry.npmjs.org/@prisma%2fclient set size:67858762 disposed:false
+19 silly fetch manifest prisma@^6.19.0
+20 silly packumentCache full:https://registry.npmjs.org/prisma cache-miss
+21 http cache https://registry.npmjs.org/prisma 100ms (cache hit)
+22 silly packumentCache full:https://registry.npmjs.org/prisma set size:43265390 disposed:false
+23 silly fetch manifest typescript@>=5.1.0
+24 silly packumentCache full:https://registry.npmjs.org/typescript cache-miss
+25 http cache https://registry.npmjs.org/typescript 37ms (cache hit)
+26 silly packumentCache full:https://registry.npmjs.org/typescript set size:15409943 disposed:false
+27 silly placeDep ROOT @prisma/client@6.19.3 REPLACE for: smarttraffic-ai-backend@0.1.0 want: ^6.19.0
+28 silly placeDep ROOT prisma@6.19.3 REPLACE for: smarttraffic-ai-backend@0.1.0 want: ^6.19.0
+29 silly fetch manifest @prisma/config@6.19.3
+30 silly packumentCache full:https://registry.npmjs.org/@prisma%2fconfig cache-miss
+31 silly fetch manifest @prisma/engines@6.19.3
+32 silly packumentCache full:https://registry.npmjs.org/@prisma%2fengines cache-miss
+33 http cache https://registry.npmjs.org/@prisma%2fconfig 15ms (cache hit)
+34 silly packumentCache full:https://registry.npmjs.org/@prisma%2fconfig set size:3790848 disposed:false
+35 http cache https://registry.npmjs.org/@prisma%2fengines 61ms (cache hit)
+36 silly packumentCache full:https://registry.npmjs.org/@prisma%2fengines set size:21774382 disposed:false
+37 silly placeDep ROOT @prisma/config@6.19.3 OK for: prisma@6.19.3 want: 6.19.3
+38 silly placeDep ROOT @prisma/engines@6.19.3 OK for: prisma@6.19.3 want: 6.19.3
+39 silly fetch manifest c12@3.1.0
+40 silly packumentCache full:https://registry.npmjs.org/c12 cache-miss
+41 silly fetch manifest effect@3.21.0
+42 silly packumentCache full:https://registry.npmjs.org/effect cache-miss
+43 silly fetch manifest empathic@2.0.0
+44 silly packumentCache full:https://registry.npmjs.org/empathic cache-miss
+45 silly fetch manifest deepmerge-ts@7.1.5
+46 silly packumentCache full:https://registry.npmjs.org/deepmerge-ts cache-miss
+47 silly fetch manifest @prisma/debug@6.19.3
+48 silly packumentCache full:https://registry.npmjs.org/@prisma%2fdebug cache-miss
+49 silly fetch manifest @prisma/fetch-engine@6.19.3
+50 silly packumentCache full:https://registry.npmjs.org/@prisma%2ffetch-engine cache-miss
+51 silly fetch manifest @prisma/get-platform@6.19.3
+52 silly packumentCache full:https://registry.npmjs.org/@prisma%2fget-platform cache-miss
+53 http cache https://registry.npmjs.org/deepmerge-ts 12ms (cache hit)
+54 silly packumentCache full:https://registry.npmjs.org/deepmerge-ts set size:334522 disposed:false
+55 silly fetch manifest @prisma/engines-version@7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7
+56 silly packumentCache full:https://registry.npmjs.org/@prisma%2fengines-version cache-miss
+57 http cache https://registry.npmjs.org/effect 30ms (cache hit)
+58 silly packumentCache full:https://registry.npmjs.org/effect set size:10073351 disposed:false
+59 http cache https://registry.npmjs.org/c12 87ms (cache hit)
+60 silly packumentCache full:https://registry.npmjs.org/c12 set size:188644 disposed:false
+61 http cache https://registry.npmjs.org/empathic 91ms (cache hit)
+62 silly packumentCache full:https://registry.npmjs.org/empathic set size:20342 disposed:false
+63 http cache https://registry.npmjs.org/@prisma%2fget-platform 151ms (cache hit)
+64 silly packumentCache full:https://registry.npmjs.org/@prisma%2fget-platform set size:28407506 disposed:false
+65 http cache https://registry.npmjs.org/@prisma%2fdebug 290ms (cache hit)
+66 silly packumentCache full:https://registry.npmjs.org/@prisma%2fdebug set size:28722398 disposed:false
+67 http cache https://registry.npmjs.org/@prisma%2fengines-version 430ms (cache hit)
+68 silly packumentCache full:https://registry.npmjs.org/@prisma%2fengines-version set size:9921553 disposed:false
+69 http cache https://registry.npmjs.org/@prisma%2ffetch-engine 526ms (cache hit)
+70 silly packumentCache full:https://registry.npmjs.org/@prisma%2ffetch-engine set size:32302120 disposed:false
+71 silly fetch manifest magicast@^0.3.5
+72 silly packumentCache full:https://registry.npmjs.org/magicast cache-miss
+73 http cache https://registry.npmjs.org/magicast 6ms (cache hit)
+74 silly packumentCache full:https://registry.npmjs.org/magicast set size:84158 disposed:false
+75 silly placeDep ROOT c12@3.1.0 OK for: @prisma/config@6.19.3 want: 3.1.0
+76 silly placeDep ROOT deepmerge-ts@7.1.5 OK for: @prisma/config@6.19.3 want: 7.1.5
+77 silly placeDep ROOT effect@3.21.0 OK for: @prisma/config@6.19.3 want: 3.21.0
+78 silly placeDep ROOT empathic@2.0.0 OK for: @prisma/config@6.19.3 want: 2.0.0
+79 silly fetch manifest rc9@^2.1.2
+80 silly packumentCache full:https://registry.npmjs.org/rc9 cache-miss
+81 silly fetch manifest defu@^6.1.4
+82 silly packumentCache full:https://registry.npmjs.org/defu cache-miss
+83 silly fetch manifest jiti@^2.4.2
+84 silly packumentCache full:https://registry.npmjs.org/jiti cache-miss
+85 silly fetch manifest giget@^2.0.0
+86 silly packumentCache full:https://registry.npmjs.org/giget cache-miss
+87 silly fetch manifest ohash@^2.0.11
+88 silly packumentCache full:https://registry.npmjs.org/ohash cache-miss
+89 silly fetch manifest pathe@^2.0.3
+90 silly packumentCache full:https://registry.npmjs.org/pathe cache-miss
+91 silly fetch manifest dotenv@^16.6.1
+92 silly packumentCache full:https://registry.npmjs.org/dotenv cache-miss
+93 http cache https://registry.npmjs.org/defu 12ms (cache hit)
+94 silly packumentCache full:https://registry.npmjs.org/defu set size:87806 disposed:false
+95 silly fetch manifest confbox@^0.2.2
+96 silly packumentCache full:https://registry.npmjs.org/confbox cache-miss
+97 http cache https://registry.npmjs.org/rc9 15ms (cache hit)
+98 silly packumentCache full:https://registry.npmjs.org/rc9 set size:62610 disposed:false
+99 silly fetch manifest exsolve@^1.0.7
+100 silly packumentCache full:https://registry.npmjs.org/exsolve cache-miss
+101 http cache https://registry.npmjs.org/pathe 15ms (cache hit)
+102 silly packumentCache full:https://registry.npmjs.org/pathe set size:68788 disposed:false
+103 silly fetch manifest chokidar@^4.0.3
+104 silly packumentCache full:https://registry.npmjs.org/chokidar cache-miss
+105 http cache https://registry.npmjs.org/ohash 17ms (cache hit)
+106 silly packumentCache full:https://registry.npmjs.org/ohash set size:69122 disposed:false
+107 silly fetch manifest pkg-types@^2.2.0
+108 silly packumentCache full:https://registry.npmjs.org/pkg-types cache-miss
+109 http cache https://registry.npmjs.org/jiti 34ms (cache hit)
+110 silly packumentCache full:https://registry.npmjs.org/jiti set size:387989 disposed:false
+111 silly fetch manifest perfect-debounce@^1.0.0
+112 silly packumentCache full:https://registry.npmjs.org/perfect-debounce cache-miss
+113 http cache https://registry.npmjs.org/giget 38ms (cache hit)
+114 silly packumentCache full:https://registry.npmjs.org/giget set size:100226 disposed:false
+115 silly fetch manifest fast-check@^3.23.1
+116 silly packumentCache full:https://registry.npmjs.org/fast-check cache-miss
+117 http cache https://registry.npmjs.org/exsolve 33ms (cache hit)
+118 silly packumentCache full:https://registry.npmjs.org/exsolve set size:56620 disposed:false
+119 silly fetch manifest @standard-schema/spec@^1.0.0
+120 silly packumentCache full:https://registry.npmjs.org/@standard-schema%2fspec cache-miss
+121 http cache https://registry.npmjs.org/confbox 36ms (cache hit)
+122 silly packumentCache full:https://registry.npmjs.org/confbox set size:44789 disposed:false
+123 http cache https://registry.npmjs.org/perfect-debounce 14ms (cache hit)
+124 silly packumentCache full:https://registry.npmjs.org/perfect-debounce set size:28201 disposed:false
+125 http cache https://registry.npmjs.org/pkg-types 34ms (cache hit)
+126 silly packumentCache full:https://registry.npmjs.org/pkg-types set size:90685 disposed:false
+127 http cache https://registry.npmjs.org/chokidar 36ms (cache hit)
+128 silly packumentCache full:https://registry.npmjs.org/chokidar set size:255902 disposed:false
+129 http cache https://registry.npmjs.org/fast-check 19ms (cache hit)
+130 silly packumentCache full:https://registry.npmjs.org/fast-check set size:941967 disposed:false
+131 http cache https://registry.npmjs.org/@standard-schema%2fspec 19ms (cache hit)
+132 silly packumentCache full:https://registry.npmjs.org/@standard-schema%2fspec set size:27284 disposed:false
+133 http fetch GET 200 https://registry.npmjs.org/dotenv 127ms (cache revalidated)
+134 silly packumentCache full:https://registry.npmjs.org/dotenv set size:277832 disposed:false
+135 silly placeDep ROOT @prisma/debug@6.19.3 OK for: @prisma/engines@6.19.3 want: 6.19.3
+136 silly placeDep ROOT @prisma/engines-version@7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7 OK for: @prisma/engines@6.19.3 want: 7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7
+137 silly placeDep ROOT @prisma/fetch-engine@6.19.3 OK for: @prisma/engines@6.19.3 want: 6.19.3
+138 silly placeDep ROOT @prisma/get-platform@6.19.3 OK for: @prisma/engines@6.19.3 want: 6.19.3
+139 silly placeDep node_modules/c12 chokidar@4.0.3 OK for: c12@3.1.0 want: ^4.0.3
+140 silly placeDep ROOT confbox@0.2.4 OK for: c12@3.1.0 want: ^0.2.2
+141 silly placeDep ROOT defu@6.1.7 OK for: c12@3.1.0 want: ^6.1.4
+142 silly placeDep node_modules/c12 dotenv@16.6.1 OK for: c12@3.1.0 want: ^16.6.1
+143 silly placeDep ROOT exsolve@1.0.8 OK for: c12@3.1.0 want: ^1.0.7
+144 silly placeDep ROOT giget@2.0.0 OK for: c12@3.1.0 want: ^2.0.0
+145 silly placeDep ROOT jiti@2.7.0 OK for: c12@3.1.0 want: ^2.4.2
+146 silly placeDep ROOT ohash@2.0.11 OK for: c12@3.1.0 want: ^2.0.11
+147 silly placeDep ROOT pathe@2.0.3 OK for: c12@3.1.0 want: ^2.0.3
+148 silly placeDep ROOT perfect-debounce@1.0.0 OK for: c12@3.1.0 want: ^1.0.0
+149 silly placeDep ROOT pkg-types@2.3.1 OK for: c12@3.1.0 want: ^2.2.0
+150 silly placeDep ROOT rc9@2.1.2 OK for: c12@3.1.0 want: ^2.1.2
+151 silly fetch manifest readdirp@^4.0.1
+152 silly packumentCache full:https://registry.npmjs.org/readdirp cache-miss
+153 silly fetch manifest nypm@^0.6.0
+154 silly packumentCache full:https://registry.npmjs.org/nypm cache-miss
+155 silly fetch manifest citty@^0.1.6
+156 silly packumentCache full:https://registry.npmjs.org/citty cache-miss
+157 silly fetch manifest consola@^3.4.0
+158 silly packumentCache full:https://registry.npmjs.org/consola cache-miss
+159 silly fetch manifest node-fetch-native@^1.6.6
+160 silly packumentCache full:https://registry.npmjs.org/node-fetch-native cache-miss
+161 silly fetch manifest destr@^2.0.3
+162 silly packumentCache full:https://registry.npmjs.org/destr cache-miss
+163 http cache https://registry.npmjs.org/destr 13ms (cache hit)
+164 silly packumentCache full:https://registry.npmjs.org/destr set size:65344 disposed:false
+165 http cache https://registry.npmjs.org/readdirp 16ms (cache hit)
+166 silly packumentCache full:https://registry.npmjs.org/readdirp set size:107589 disposed:false
+167 http fetch GET 200 https://registry.npmjs.org/consola 117ms (cache miss)
+168 silly packumentCache full:https://registry.npmjs.org/consola set size:undefined disposed:false
+169 http fetch GET 200 https://registry.npmjs.org/citty 124ms (cache miss)
+170 silly packumentCache full:https://registry.npmjs.org/citty set size:undefined disposed:false
+171 http fetch GET 200 https://registry.npmjs.org/nypm 205ms (cache miss)
+172 silly packumentCache full:https://registry.npmjs.org/nypm set size:undefined disposed:false
+173 http fetch GET 200 https://registry.npmjs.org/node-fetch-native 245ms (cache miss)
+174 silly packumentCache full:https://registry.npmjs.org/node-fetch-native set size:undefined disposed:false
+175 silly placeDep ROOT @standard-schema/spec@1.1.0 OK for: effect@3.21.0 want: ^1.0.0
+176 silly placeDep ROOT fast-check@3.23.2 OK for: effect@3.21.0 want: ^3.23.1
+177 silly fetch manifest pure-rand@^6.1.0
+178 silly packumentCache full:https://registry.npmjs.org/pure-rand cache-miss
+179 http cache https://registry.npmjs.org/pure-rand 5ms (cache hit)
+180 silly packumentCache full:https://registry.npmjs.org/pure-rand set size:185950 disposed:false
+181 silly placeDep ROOT pure-rand@6.1.0 OK for: fast-check@3.23.2 want: ^6.1.0
+182 silly placeDep ROOT citty@0.1.6 OK for: giget@2.0.0 want: ^0.1.6
+183 silly placeDep ROOT consola@3.4.2 OK for: giget@2.0.0 want: ^3.4.0
+184 silly placeDep ROOT node-fetch-native@1.6.7 OK for: giget@2.0.0 want: ^1.6.6
+185 silly placeDep ROOT nypm@0.6.7 OK for: giget@2.0.0 want: ^0.6.0
+186 silly fetch manifest consola@^3.2.3
+187 silly packumentCache full:https://registry.npmjs.org/consola cache-miss
+188 silly fetch manifest citty@^0.2.2
+189 silly packumentCache full:https://registry.npmjs.org/citty cache-miss
+190 silly fetch manifest tinyexec@^1.2.4
+191 silly packumentCache full:https://registry.npmjs.org/tinyexec cache-miss
+192 http cache https://registry.npmjs.org/citty 8ms (cache hit)
+193 silly packumentCache full:https://registry.npmjs.org/citty set size:38582 disposed:false
+194 http cache https://registry.npmjs.org/consola 10ms (cache hit)
+195 silly packumentCache full:https://registry.npmjs.org/consola set size:324648 disposed:false
+196 http fetch GET 200 https://registry.npmjs.org/tinyexec 53ms (cache miss)
+197 silly packumentCache full:https://registry.npmjs.org/tinyexec set size:undefined disposed:false
+198 silly placeDep node_modules/nypm citty@0.2.2 OK for: nypm@0.6.7 want: ^0.2.2
+199 silly placeDep ROOT tinyexec@1.2.4 OK for: nypm@0.6.7 want: ^1.2.4
+200 silly placeDep ROOT destr@2.0.5 OK for: rc9@2.1.2 want: ^2.0.3
+201 silly placeDep node_modules/c12 readdirp@4.1.2 OK for: chokidar@4.0.3 want: ^4.0.1
+202 silly reify mark retired [
+202 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\aws-ssl-profiles'
+202 silly reify ]
+203 silly reify mark retired [
+203 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\ajv'
+203 silly reify ]
+204 silly reify mark retired [
+204 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\better-result'
+204 silly reify ]
+205 silly reify mark retired [
+205 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\c12'
+205 silly reify ]
+206 silly reify mark retired [
+206 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\chart.js'
+206 silly reify ]
+207 silly reify mark retired [
+207 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\cross-spawn'
+207 silly reify ]
+208 silly reify mark retired [
+208 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\csstype'
+208 silly reify ]
+209 silly reify mark retired [
+209 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\denque'
+209 silly reify ]
+210 silly reify mark retired [
+210 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\effect'
+210 silly reify ]
+211 silly reify mark retired [
+211 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\env-paths'
+211 silly reify ]
+212 silly reify mark retired [
+212 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\fast-deep-equal'
+212 silly reify ]
+213 silly reify mark retired [
+213 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\fast-uri'
+213 silly reify ]
+214 silly reify mark retired [
+214 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\foreground-child'
+214 silly reify ]
+215 silly reify mark retired [
+215 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\generate-function'
+215 silly reify ]
+216 silly reify mark retired [
+216 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\get-port-please'
+216 silly reify ]
+217 silly reify mark retired [
+217 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\giget',
+217 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\giget',
+217 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\giget.cmd',
+217 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\giget.ps1'
+217 silly reify ]
+218 silly reify mark retired [
+218 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\graceful-fs'
+218 silly reify ]
+219 silly reify mark retired [
+219 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\grammex'
+219 silly reify ]
+220 silly reify mark retired [
+220 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\graphmatch'
+220 silly reify ]
+221 silly reify mark retired [
+221 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\hono'
+221 silly reify ]
+222 silly reify mark retired [
+222 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\http-status-codes'
+222 silly reify ]
+223 silly reify mark retired [
+223 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\is-property'
+223 silly reify ]
+224 silly reify mark retired [
+224 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\isexe'
+224 silly reify ]
+225 silly reify mark retired [
+225 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\json-schema-traverse'
+225 silly reify ]
+226 silly reify mark retired [
+226 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\lru.min'
+226 silly reify ]
+227 silly reify mark retired [
+227 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\long'
+227 silly reify ]
+228 silly reify mark retired [
+228 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\mysql2'
+228 silly reify ]
+229 silly reify mark retired [
+229 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\named-placeholders'
+229 silly reify ]
+230 silly reify mark retired [
+230 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\perfect-debounce'
+230 silly reify ]
+231 silly reify mark retired [
+231 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\path-key'
+231 silly reify ]
+232 silly reify mark retired [
+232 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\postgres'
+232 silly reify ]
+233 silly reify mark retired [
+233 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\proper-lockfile'
+233 silly reify ]
+234 silly reify mark retired [
+234 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\prisma',
+234 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\prisma',
+234 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\prisma.cmd',
+234 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\prisma.ps1'
+234 silly reify ]
+235 silly reify mark retired [
+235 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\rc9'
+235 silly reify ]
+236 silly reify mark retired [
+236 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\react'
+236 silly reify ]
+237 silly reify mark retired [
+237 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\react-dom'
+237 silly reify ]
+238 silly reify mark retired [
+238 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\retry'
+238 silly reify ]
+239 silly reify mark retired [
+239 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\remeda'
+239 silly reify ]
+240 silly reify mark retired [
+240 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\require-from-string'
+240 silly reify ]
+241 silly reify mark retired [
+241 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\scheduler'
+241 silly reify ]
+242 silly reify mark retired [
+242 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\shebang-command'
+242 silly reify ]
+243 silly reify mark retired [
+243 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\seq-queue'
+243 silly reify ]
+244 silly reify mark retired [
+244 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\shebang-regex'
+244 silly reify ]
+245 silly reify mark retired [
+245 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\signal-exit'
+245 silly reify ]
+246 silly reify mark retired [
+246 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\sqlstring'
+246 silly reify ]
+247 silly reify mark retired [
+247 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\std-env'
+247 silly reify ]
+248 silly reify mark retired [
+248 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\which',
+248 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\node-which',
+248 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\node-which.cmd',
+248 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\node-which.ps1'
+248 silly reify ]
+249 silly reify mark retired [
+249 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\valibot'
+249 silly reify ]
+250 silly reify mark retired [
+250 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\zeptomatch'
+250 silly reify ]
+251 silly reify mark retired [
+251 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@electric-sql\\pglite'
+251 silly reify ]
+252 silly reify mark retired [
+252 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@electric-sql\\pglite-socket',
+252 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\pglite-server',
+252 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\pglite-server.cmd',
+252 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\pglite-server.ps1'
+252 silly reify ]
+253 silly reify mark retired [
+253 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@electric-sql\\pglite-tools'
+253 silly reify ]
+254 silly reify mark retired [
+254 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@hono\\node-server'
+254 silly reify ]
+255 silly reify mark retired [
+255 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\client'
+255 silly reify ]
+256 silly reify mark retired [
+256 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\client-runtime-utils'
+256 silly reify ]
+257 silly reify mark retired [
+257 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@kurkle\\color'
+257 silly reify ]
+258 silly reify mark retired [
+258 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\config'
+258 silly reify ]
+259 silly reify mark retired [
+259 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\dev'
+259 silly reify ]
+260 silly reify mark retired [
+260 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\debug'
+260 silly reify ]
+261 silly reify mark retired [
+261 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\engines'
+261 silly reify ]
+262 silly reify mark retired [
+262 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\engines-version'
+262 silly reify ]
+263 silly reify mark retired [
+263 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\query-plan-executor'
+263 silly reify ]
+264 silly reify mark retired [
+264 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\fetch-engine'
+264 silly reify ]
+265 silly reify mark retired [
+265 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\get-platform'
+265 silly reify ]
+266 silly reify mark retired [
+266 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\streams-local'
+266 silly reify ]
+267 silly reify mark retired [
+267 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\studio-core'
+267 silly reify ]
+268 silly reify mark retired [
+268 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@radix-ui\\primitive'
+268 silly reify ]
+269 silly reify mark retired [
+269 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@radix-ui\\react-compose-refs'
+269 silly reify ]
+270 silly reify mark retired [
+270 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@radix-ui\\react-slot'
+270 silly reify ]
+271 silly reify mark retired [
+271 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@radix-ui\\react-toggle'
+271 silly reify ]
+272 silly reify mark retired [
+272 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@radix-ui\\react-primitive'
+272 silly reify ]
+273 silly reify mark retired [
+273 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@radix-ui\\react-use-controllable-state'
+273 silly reify ]
+274 silly reify mark retired [
+274 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@radix-ui\\react-use-effect-event'
+274 silly reify ]
+275 silly reify mark retired [
+275 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@radix-ui\\react-use-layout-effect'
+275 silly reify ]
+276 silly reify mark retired [
+276 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@types\\react'
+276 silly reify ]
+277 silly reify moves {
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\aws-ssl-profiles': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.aws-ssl-profiles-1T6cq7L1',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\ajv': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.ajv-fMMcunRd',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\better-result': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.better-result-BNwUel0r',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\c12': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.c12-wVKJDKzs',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\chart.js': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.chart.js-A9wfs7nf',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\cross-spawn': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.cross-spawn-mY0HWPFw',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\csstype': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.csstype-Wye4vPAl',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\denque': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.denque-XS4juuHr',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\effect': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.effect-UjflmNSw',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\env-paths': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.env-paths-MimjMTwc',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\fast-deep-equal': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.fast-deep-equal-oYfocdMo',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\fast-uri': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.fast-uri-KNgEfnFt',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\foreground-child': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.foreground-child-q6cPkzfe',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\generate-function': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.generate-function-tSmINQad',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\get-port-please': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.get-port-please-n1Hj06RI',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\giget': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.giget-q9J7tPmd',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\giget': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\.giget-dFjlyb5d',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\giget.cmd': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\.giget.cmd-zf6rVMdo',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\giget.ps1': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\.giget.ps1-WZn33tIf',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\graceful-fs': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.graceful-fs-9UQkpcMW',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\grammex': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.grammex-jwivGbhP',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\graphmatch': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.graphmatch-QFPO8OFd',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\hono': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.hono-EJ4QpvY8',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\http-status-codes': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.http-status-codes-IVVsftjR',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\is-property': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.is-property-nIseedsM',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\isexe': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.isexe-3VWiHltT',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\json-schema-traverse': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.json-schema-traverse-kC15tmUL',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\lru.min': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.lru.min-heD6cwhb',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\long': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.long-tKss0DgE',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\mysql2': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.mysql2-NZnNdYs0',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\named-placeholders': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.named-placeholders-kd7Ua3k5',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\perfect-debounce': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.perfect-debounce-067L3usG',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\path-key': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.path-key-iaWwHfsy',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\postgres': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.postgres-EkOMoHxp',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\proper-lockfile': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.proper-lockfile-V4qkEnFG',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\prisma': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.prisma-2bhheVsE',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\prisma': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\.prisma-QEUQwHuT',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\prisma.cmd': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\.prisma.cmd-7DNNSvEy',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\prisma.ps1': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\.prisma.ps1-i3h1FvKq',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\rc9': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.rc9-jBUTO7ct',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\react': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.react-fiWXfAt6',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\react-dom': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.react-dom-uI4lqYbc',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\retry': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.retry-68HaWn0B',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\remeda': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.remeda-1IjD214R',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\require-from-string': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.require-from-string-9ybPe9X5',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\scheduler': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.scheduler-rwolqlMM',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\shebang-command': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.shebang-command-e59wYUd1',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\seq-queue': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.seq-queue-JXqxoBvE',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\shebang-regex': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.shebang-regex-pEy5CPre',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\signal-exit': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.signal-exit-BvsSc6lL',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\sqlstring': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.sqlstring-Grxfjwsd',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\std-env': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.std-env-SBJYOf2M',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\which': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.which-klqONFQ8',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\node-which': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\.node-which-wgbGwTYR',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\node-which.cmd': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\.node-which.cmd-5AkvtFce',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\node-which.ps1': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\.node-which.ps1-yYR9tRbS',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\valibot': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.valibot-PnS7y7YH',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\zeptomatch': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.zeptomatch-BaVFUqyi',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@electric-sql\\pglite': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@electric-sql\\.pglite-rZx9SSRN',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@electric-sql\\pglite-socket': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@electric-sql\\.pglite-socket-xsqtPBiR',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\pglite-server': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\.pglite-server-kHArdU06',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\pglite-server.cmd': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\.pglite-server.cmd-VFx1oz8a',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\pglite-server.ps1': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\.bin\\.pglite-server.ps1-c9iCybLP',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@electric-sql\\pglite-tools': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@electric-sql\\.pglite-tools-04NxKy9L',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@hono\\node-server': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@hono\\.node-server-ZYYMdGi4',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\client': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\.client-dRTt2kZB',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\client-runtime-utils': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\.client-runtime-utils-BVsDBE5g',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@kurkle\\color': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@kurkle\\.color-pQTF9TEw',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\config': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\.config-sq1vyLmv',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\dev': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\.dev-YkmM8MTH',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\debug': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\.debug-mRwNbsXT',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\engines': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\.engines-DjNXeo78',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\engines-version': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\.engines-version-qRJ8SmCU',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\query-plan-executor': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\.query-plan-executor-wumw3P5m',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\fetch-engine': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\.fetch-engine-6SH9efxD',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\get-platform': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\.get-platform-fys9p0Jw',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\streams-local': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\.streams-local-L0nODJtX',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\studio-core': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@prisma\\.studio-core-bGHbwIwN',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@radix-ui\\primitive': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@radix-ui\\.primitive-rLkaxJC8',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@radix-ui\\react-compose-refs': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@radix-ui\\.react-compose-refs-ep8uMiXe',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@radix-ui\\react-slot': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@radix-ui\\.react-slot-oSrEnmqw',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@radix-ui\\react-toggle': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@radix-ui\\.react-toggle-qlOilyuz',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@radix-ui\\react-primitive': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@radix-ui\\.react-primitive-HvBMorgo',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@radix-ui\\react-use-controllable-state': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@radix-ui\\.react-use-controllable-state-DwuqlJuV',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@radix-ui\\react-use-effect-event': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@radix-ui\\.react-use-effect-event-DTVluqZG',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@radix-ui\\react-use-layout-effect': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@radix-ui\\.react-use-layout-effect-ly7ZdpgW',
+277 silly reify   'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@types\\react': 'C:\\Users\\anita\\Documents\\Codex\\2026-06-11\\files-mentioned-by-the-user-build\\backend\\node_modules\\@types\\.react-3je4YHNi'
+277 silly reify }
+278 silly audit bulk request {
+278 silly audit   accepts: [ '2.0.0' ],
+278 silly audit   anymatch: [ '3.1.3' ],
+278 silly audit   'balanced-match': [ '4.0.4' ],
+278 silly audit   bcrypt: [ '6.0.0' ],
+278 silly audit   'binary-extensions': [ '2.3.0' ],
+278 silly audit   'body-parser': [ '2.2.2' ],
+278 silly audit   'brace-expansion': [ '5.0.6' ],
+278 silly audit   braces: [ '3.0.3' ],
+278 silly audit   'buffer-equal-constant-time': [ '1.0.1' ],
+278 silly audit   bytes: [ '3.1.2' ],
+278 silly audit   chokidar: [ '3.6.0', '4.0.3' ],
+278 silly audit   readdirp: [ '3.6.0', '4.1.2' ],
+278 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+278 silly audit   'call-bound': [ '1.0.4' ],
+278 silly audit   'content-disposition': [ '1.1.0' ],
+278 silly audit   'content-type': [ '1.0.5', '2.0.0' ],
+278 silly audit   cookie: [ '0.7.2' ],
+278 silly audit   'cookie-signature': [ '1.2.2' ],
+278 silly audit   cors: [ '2.8.6' ],
+278 silly audit   debug: [ '4.4.3' ],
+278 silly audit   depd: [ '2.0.0' ],
+278 silly audit   dotenv: [ '17.4.2', '16.6.1' ],
+278 silly audit   'dunder-proto': [ '1.0.1' ],
+278 silly audit   'ecdsa-sig-formatter': [ '1.0.11' ],
+278 silly audit   'ee-first': [ '1.1.1' ],
+278 silly audit   encodeurl: [ '2.0.0' ],
+278 silly audit   'es-define-property': [ '1.0.1' ],
+278 silly audit   'es-errors': [ '1.3.0' ],
+278 silly audit   'es-object-atoms': [ '1.1.2' ],
+278 silly audit   'escape-html': [ '1.0.3' ],
+278 silly audit   etag: [ '1.8.1' ],
+278 silly audit   express: [ '5.2.1' ],
+278 silly audit   'fill-range': [ '7.1.1' ],
+278 silly audit   finalhandler: [ '2.1.1' ],
+278 silly audit   forwarded: [ '0.2.0' ],
+278 silly audit   fresh: [ '2.0.0' ],
+278 silly audit   fsevents: [ '2.3.3' ],
+278 silly audit   'function-bind': [ '1.1.2' ],
+278 silly audit   'get-intrinsic': [ '1.3.0' ],
+278 silly audit   'get-proto': [ '1.0.1' ],
+278 silly audit   'glob-parent': [ '5.1.2' ],
+278 silly audit   gopd: [ '1.2.0' ],
+278 silly audit   'has-flag': [ '3.0.0' ],
+278 silly audit   'has-symbols': [ '1.1.0' ],
+278 silly audit   hasown: [ '2.0.4' ],
+278 silly audit   'http-errors': [ '2.0.1' ],
+278 silly audit   'iconv-lite': [ '0.7.2' ],
+278 silly audit   'ignore-by-default': [ '1.0.1' ],
+278 silly audit   inherits: [ '2.0.4' ],
+278 silly audit   'ipaddr.js': [ '1.9.1' ],
+278 silly audit   'is-binary-path': [ '2.1.0' ],
+278 silly audit   'is-extglob': [ '2.1.1' ],
+278 silly audit   'is-glob': [ '4.0.3' ],
+278 silly audit   'is-number': [ '7.0.0' ],
+278 silly audit   'is-promise': [ '4.0.0' ],
+278 silly audit   jsonwebtoken: [ '9.0.3' ],
+278 silly audit   jwa: [ '2.0.1' ],
+278 silly audit   jws: [ '4.0.1' ],
+278 silly audit   'lodash.includes': [ '4.3.0' ],
+278 silly audit   'lodash.isboolean': [ '3.0.3' ],
+278 silly audit   'lodash.isinteger': [ '4.0.4' ],
+278 silly audit   'lodash.isnumber': [ '3.0.3' ],
+278 silly audit   'lodash.isplainobject': [ '4.0.6' ],
+278 silly audit   'lodash.isstring': [ '4.0.1' ],
+278 silly audit   'lodash.once': [ '4.1.1' ],
+278 silly audit   'math-intrinsics': [ '1.1.0' ],
+278 silly audit   'media-typer': [ '1.1.0' ],
+278 silly audit   'merge-descriptors': [ '2.0.0' ],
+278 silly audit   'mime-db': [ '1.54.0' ],
+278 silly audit   'mime-types': [ '3.0.2' ],
+278 silly audit   minimatch: [ '10.2.5' ],
+278 silly audit   ms: [ '2.1.3' ],
+278 silly audit   negotiator: [ '1.0.0' ],
+278 silly audit   'node-addon-api': [ '8.8.0' ],
+278 silly audit   'node-gyp-build': [ '4.8.4' ],
+278 silly audit   nodemon: [ '3.1.14' ],
+278 silly audit   'normalize-path': [ '3.0.0' ],
+278 silly audit   'object-assign': [ '4.1.1' ],
+278 silly audit   'object-inspect': [ '1.13.4' ],
+278 silly audit   'on-finished': [ '2.4.1' ],
+278 silly audit   once: [ '1.4.0' ],
+278 silly audit   parseurl: [ '1.3.3' ],
+278 silly audit   'path-to-regexp': [ '8.4.2' ],
+278 silly audit   picomatch: [ '2.3.2' ],
+278 silly audit   'proxy-addr': [ '2.0.7' ],
+278 silly audit   'pstree.remy': [ '1.1.8' ],
+278 silly audit   qs: [ '6.15.2' ],
+278 silly audit   'range-parser': [ '1.2.1' ],
+278 silly audit   'raw-body': [ '3.0.2' ],
+278 silly audit   router: [ '2.2.0' ],
+278 silly audit   'safe-buffer': [ '5.2.1' ],
+278 silly audit   'safer-buffer': [ '2.1.2' ],
+278 silly audit   semver: [ '7.8.4' ],
+278 silly audit   send: [ '1.2.1' ],
+278 silly audit   'serve-static': [ '2.2.1' ],
+278 silly audit   setprototypeof: [ '1.2.0' ],
+278 silly audit   'side-channel': [ '1.1.1' ],
+278 silly audit   'side-channel-list': [ '1.0.1' ],
+278 silly audit   'side-channel-map': [ '1.0.1' ],
+278 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+278 silly audit   'simple-update-notifier': [ '2.0.0' ],
+278 silly audit   statuses: [ '2.0.2' ],
+278 silly audit   'supports-color': [ '5.5.0' ],
+278 silly audit   'to-regex-range': [ '5.0.1' ],
+278 silly audit   toidentifier: [ '1.0.1' ],
+278 silly audit   touch: [ '3.1.1' ],
+278 silly audit   'type-is': [ '2.1.0' ],
+278 silly audit   undefsafe: [ '2.0.5' ],
+278 silly audit   unpipe: [ '1.0.0' ],
+278 silly audit   vary: [ '1.1.2' ],
+278 silly audit   wrappy: [ '1.0.2' ],
+278 silly audit   '@prisma/client': [ '6.19.3' ],
+278 silly audit   prisma: [ '6.19.3' ],
+278 silly audit   '@prisma/config': [ '6.19.3' ],
+278 silly audit   '@prisma/engines': [ '6.19.3' ],
+278 silly audit   c12: [ '3.1.0' ],
+278 silly audit   'deepmerge-ts': [ '7.1.5' ],
+278 silly audit   effect: [ '3.21.0' ],
+278 silly audit   empathic: [ '2.0.0' ],
+278 silly audit   '@prisma/debug': [ '6.19.3' ],
+278 silly audit   '@prisma/engines-version': [ '7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7' ],
+278 silly audit   '@prisma/fetch-engine': [ '6.19.3' ],
+278 silly audit   '@prisma/get-platform': [ '6.19.3' ],
+278 silly audit   confbox: [ '0.2.4' ],
+278 silly audit   defu: [ '6.1.7' ],
+278 silly audit   exsolve: [ '1.0.8' ],
+278 silly audit   giget: [ '2.0.0' ],
+278 silly audit   jiti: [ '2.7.0' ],
+278 silly audit   ohash: [ '2.0.11' ],
+278 silly audit   pathe: [ '2.0.3' ],
+278 silly audit   'perfect-debounce': [ '1.0.0' ],
+278 silly audit   'pkg-types': [ '2.3.1' ],
+278 silly audit   rc9: [ '2.1.2' ],
+278 silly audit   '@standard-schema/spec': [ '1.1.0' ],
+278 silly audit   'fast-check': [ '3.23.2' ],
+278 silly audit   'pure-rand': [ '6.1.0' ],
+278 silly audit   citty: [ '0.1.6', '0.2.2' ],
+278 silly audit   consola: [ '3.4.2' ],
+278 silly audit   'node-fetch-native': [ '1.6.7' ],
+278 silly audit   nypm: [ '0.6.7' ],
+278 silly audit   tinyexec: [ '1.2.4' ],
+278 silly audit   destr: [ '2.0.5' ]
+278 silly audit }
+279 http cache @prisma/get-platform@https://registry.npmjs.org/@prisma/get-platform/-/get-platform-6.19.3.tgz 0ms (cache hit)
+280 http cache @prisma/fetch-engine@https://registry.npmjs.org/@prisma/fetch-engine/-/fetch-engine-6.19.3.tgz 0ms (cache hit)
+281 http cache @prisma/engines@https://registry.npmjs.org/@prisma/engines/-/engines-6.19.3.tgz 0ms (cache hit)
+282 http cache tinyexec@https://registry.npmjs.org/tinyexec/-/tinyexec-1.2.4.tgz 0ms (cache hit)
+283 http cache nypm@https://registry.npmjs.org/nypm/-/nypm-0.6.7.tgz 0ms (cache hit)
+284 http cache node-fetch-native@https://registry.npmjs.org/node-fetch-native/-/node-fetch-native-1.6.7.tgz 0ms (cache hit)
+285 http cache citty@https://registry.npmjs.org/citty/-/citty-0.1.6.tgz 0ms (cache hit)
+286 http cache consola@https://registry.npmjs.org/consola/-/consola-3.4.2.tgz 0ms (cache hit)
+287 silly tarball no local data for @prisma/get-platform@https://registry.npmjs.org/@prisma/get-platform/-/get-platform-6.19.3.tgz. Extracting by manifest.
+288 http cache @prisma/debug@https://registry.npmjs.org/@prisma/debug/-/debug-6.19.3.tgz 0ms (cache hit)
+289 silly tarball no local data for @prisma/fetch-engine@https://registry.npmjs.org/@prisma/fetch-engine/-/fetch-engine-6.19.3.tgz. Extracting by manifest.
+290 http cache rc9@https://registry.npmjs.org/rc9/-/rc9-2.1.2.tgz 0ms (cache hit)
+291 silly tarball no local data for @prisma/engines@https://registry.npmjs.org/@prisma/engines/-/engines-6.19.3.tgz. Extracting by manifest.
+292 http cache @prisma/engines-version@https://registry.npmjs.org/@prisma/engines-version/-/engines-version-7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7.tgz 0ms (cache hit)
+293 http cache prisma@https://registry.npmjs.org/prisma/-/prisma-6.19.3.tgz 0ms (cache hit)
+294 http cache @prisma/config@https://registry.npmjs.org/@prisma/config/-/config-6.19.3.tgz 0ms (cache hit)
+295 http cache @prisma/client@https://registry.npmjs.org/@prisma/client/-/client-6.19.3.tgz 0ms (cache hit)
+296 http cache citty@https://registry.npmjs.org/citty/-/citty-0.2.2.tgz 0ms (cache hit)
+297 http cache giget@https://registry.npmjs.org/giget/-/giget-2.0.0.tgz 0ms (cache hit)
+298 http cache perfect-debounce@https://registry.npmjs.org/perfect-debounce/-/perfect-debounce-1.0.0.tgz 0ms (cache hit)
+299 http cache effect@https://registry.npmjs.org/effect/-/effect-3.21.0.tgz 0ms (cache hit)
+300 http cache c12@https://registry.npmjs.org/c12/-/c12-3.1.0.tgz 0ms (cache hit)
+301 silly tarball no local data for tinyexec@https://registry.npmjs.org/tinyexec/-/tinyexec-1.2.4.tgz. Extracting by manifest.
+302 silly tarball no local data for nypm@https://registry.npmjs.org/nypm/-/nypm-0.6.7.tgz. Extracting by manifest.
+303 silly tarball no local data for node-fetch-native@https://registry.npmjs.org/node-fetch-native/-/node-fetch-native-1.6.7.tgz. Extracting by manifest.
+304 http cache readdirp@https://registry.npmjs.org/readdirp/-/readdirp-4.1.2.tgz 0ms (cache hit)
+305 silly tarball no local data for citty@https://registry.npmjs.org/citty/-/citty-0.1.6.tgz. Extracting by manifest.
+306 http cache dotenv@https://registry.npmjs.org/dotenv/-/dotenv-16.6.1.tgz 0ms (cache hit)
+307 http cache chokidar@https://registry.npmjs.org/chokidar/-/chokidar-4.0.3.tgz 0ms (cache hit)
+308 silly tarball no local data for consola@https://registry.npmjs.org/consola/-/consola-3.4.2.tgz. Extracting by manifest.
+309 silly tarball no local data for @prisma/debug@https://registry.npmjs.org/@prisma/debug/-/debug-6.19.3.tgz. Extracting by manifest.
+310 silly tarball no local data for rc9@https://registry.npmjs.org/rc9/-/rc9-2.1.2.tgz. Extracting by manifest.
+311 silly tarball no local data for @prisma/engines-version@https://registry.npmjs.org/@prisma/engines-version/-/engines-version-7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7.tgz. Extracting by manifest.
+312 silly tarball no local data for prisma@https://registry.npmjs.org/prisma/-/prisma-6.19.3.tgz. Extracting by manifest.
+313 silly tarball no local data for @prisma/config@https://registry.npmjs.org/@prisma/config/-/config-6.19.3.tgz. Extracting by manifest.
+314 silly tarball no local data for @prisma/client@https://registry.npmjs.org/@prisma/client/-/client-6.19.3.tgz. Extracting by manifest.
+315 silly tarball no local data for citty@https://registry.npmjs.org/citty/-/citty-0.2.2.tgz. Extracting by manifest.
+316 silly tarball no local data for giget@https://registry.npmjs.org/giget/-/giget-2.0.0.tgz. Extracting by manifest.
+317 silly tarball no local data for perfect-debounce@https://registry.npmjs.org/perfect-debounce/-/perfect-debounce-1.0.0.tgz. Extracting by manifest.
+318 silly tarball no local data for effect@https://registry.npmjs.org/effect/-/effect-3.21.0.tgz. Extracting by manifest.
+319 silly tarball no local data for c12@https://registry.npmjs.org/c12/-/c12-3.1.0.tgz. Extracting by manifest.
+320 silly tarball no local data for readdirp@https://registry.npmjs.org/readdirp/-/readdirp-4.1.2.tgz. Extracting by manifest.
+321 silly tarball no local data for dotenv@https://registry.npmjs.org/dotenv/-/dotenv-16.6.1.tgz. Extracting by manifest.
+322 silly tarball no local data for chokidar@https://registry.npmjs.org/chokidar/-/chokidar-4.0.3.tgz. Extracting by manifest.
+323 http fetch GET 200 https://registry.npmjs.org/tinyexec/-/tinyexec-1.2.4.tgz 125ms (cache miss)
+324 http fetch GET 200 https://registry.npmjs.org/citty/-/citty-0.1.6.tgz 127ms (cache miss)
+325 http fetch GET 200 https://registry.npmjs.org/citty/-/citty-0.2.2.tgz 197ms (cache miss)
+326 http fetch GET 200 https://registry.npmjs.org/rc9/-/rc9-2.1.2.tgz 204ms (cache miss)
+327 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 241ms
+328 silly audit report {}
+329 http fetch GET 200 https://registry.npmjs.org/nypm/-/nypm-0.6.7.tgz 229ms (cache miss)
+330 http fetch GET 200 https://registry.npmjs.org/perfect-debounce/-/perfect-debounce-1.0.0.tgz 239ms (cache miss)
+331 http fetch GET 200 https://registry.npmjs.org/node-fetch-native/-/node-fetch-native-1.6.7.tgz 289ms (cache miss)
+332 http fetch GET 200 https://registry.npmjs.org/c12/-/c12-3.1.0.tgz 282ms (cache miss)
+333 http fetch GET 200 https://registry.npmjs.org/readdirp/-/readdirp-4.1.2.tgz 323ms (cache miss)
+334 http fetch GET 200 https://registry.npmjs.org/giget/-/giget-2.0.0.tgz 385ms (cache miss)
+335 http fetch GET 200 https://registry.npmjs.org/chokidar/-/chokidar-4.0.3.tgz 426ms (cache miss)
+336 http fetch GET 200 https://registry.npmjs.org/consola/-/consola-3.4.2.tgz 455ms (cache miss)
+337 http fetch GET 200 https://registry.npmjs.org/dotenv/-/dotenv-16.6.1.tgz 451ms (cache miss)
+338 http fetch GET 200 https://registry.npmjs.org/@prisma/engines/-/engines-6.19.3.tgz 565ms (cache miss)
+339 http fetch GET 200 https://registry.npmjs.org/@prisma/engines-version/-/engines-version-7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7.tgz 721ms (cache miss)
+340 http fetch GET 200 https://registry.npmjs.org/@prisma/debug/-/debug-6.19.3.tgz 797ms (cache miss)
+341 http fetch GET 200 https://registry.npmjs.org/@prisma/config/-/config-6.19.3.tgz 923ms (cache miss)
+342 http fetch GET 200 https://registry.npmjs.org/@prisma/fetch-engine/-/fetch-engine-6.19.3.tgz 1011ms (cache miss)
+343 http fetch GET 200 https://registry.npmjs.org/@prisma/get-platform/-/get-platform-6.19.3.tgz 1080ms (cache miss)
+344 http fetch GET 200 https://registry.npmjs.org/effect/-/effect-3.21.0.tgz 7657ms (cache miss)
+345 http fetch GET 200 https://registry.npmjs.org/prisma/-/prisma-6.19.3.tgz 11492ms (cache miss)
+346 http fetch GET 200 https://registry.npmjs.org/@prisma/client/-/client-6.19.3.tgz 16149ms (cache miss)
+347 info run prisma@6.19.3 preinstall node_modules/prisma node scripts/preinstall-entry.js
+348 info run prisma@6.19.3 preinstall { code: 0, signal: null }
+349 info run @prisma/client@6.19.3 postinstall node_modules/@prisma/client node scripts/postinstall.js
+350 info run @prisma/engines@6.19.3 postinstall node_modules/@prisma/engines node scripts/postinstall.js
+351 info run @prisma/client@6.19.3 postinstall { code: 0, signal: null }
+352 info run @prisma/engines@6.19.3 postinstall { code: 0, signal: null }
+353 silly ADD node_modules/tinyexec
+354 silly ADD node_modules/nypm
+355 silly ADD node_modules/nypm/node_modules/citty
+356 silly ADD node_modules/node-fetch-native
+357 silly ADD node_modules/consola
+358 silly ADD node_modules/citty
+359 silly REMOVE node_modules/@types/react
+360 silly REMOVE node_modules/@radix-ui/react-use-layout-effect
+361 silly REMOVE node_modules/@radix-ui/react-use-effect-event
+362 silly REMOVE node_modules/@radix-ui/react-use-controllable-state
+363 silly REMOVE node_modules/@radix-ui/react-primitive
+364 silly REMOVE node_modules/@radix-ui/react-toggle
+365 silly REMOVE node_modules/@radix-ui/react-slot
+366 silly REMOVE node_modules/@radix-ui/react-compose-refs
+367 silly REMOVE node_modules/@radix-ui/primitive
+368 silly REMOVE node_modules/@prisma/studio-core
+369 silly REMOVE node_modules/@prisma/streams-local
+370 silly CHANGE node_modules/@prisma/get-platform
+371 silly REMOVE node_modules/@prisma/get-platform/node_modules/@prisma/debug
+372 silly CHANGE node_modules/@prisma/fetch-engine
+373 silly REMOVE node_modules/@prisma/fetch-engine/node_modules/@prisma/get-platform
+374 silly REMOVE node_modules/@prisma/query-plan-executor
+375 silly CHANGE node_modules/@prisma/engines-version
+376 silly CHANGE node_modules/@prisma/engines
+377 silly REMOVE node_modules/@prisma/engines/node_modules/@prisma/get-platform
+378 silly CHANGE node_modules/@prisma/debug
+379 silly REMOVE node_modules/@prisma/dev
+380 silly CHANGE node_modules/@prisma/config
+381 silly REMOVE node_modules/@kurkle/color
+382 silly REMOVE node_modules/@prisma/client-runtime-utils
+383 silly CHANGE node_modules/@prisma/client
+384 silly REMOVE node_modules/@hono/node-server
+385 silly REMOVE node_modules/@electric-sql/pglite-tools
+386 silly REMOVE node_modules/@electric-sql/pglite-socket
+387 silly REMOVE node_modules/@electric-sql/pglite
+388 silly REMOVE node_modules/zeptomatch
+389 silly REMOVE node_modules/valibot
+390 silly REMOVE node_modules/which
+391 silly REMOVE node_modules/std-env
+392 silly REMOVE node_modules/sqlstring
+393 silly REMOVE node_modules/signal-exit
+394 silly REMOVE node_modules/shebang-regex
+395 silly REMOVE node_modules/seq-queue
+396 silly REMOVE node_modules/shebang-command
+397 silly REMOVE node_modules/scheduler
+398 silly REMOVE node_modules/require-from-string
+399 silly REMOVE node_modules/remeda
+400 silly REMOVE node_modules/retry
+401 silly REMOVE node_modules/react-dom
+402 silly REMOVE node_modules/react
+403 silly CHANGE node_modules/rc9
+404 silly CHANGE node_modules/prisma
+405 silly REMOVE node_modules/proper-lockfile
+406 silly REMOVE node_modules/proper-lockfile/node_modules/signal-exit
+407 silly REMOVE node_modules/postgres
+408 silly REMOVE node_modules/path-key
+409 silly CHANGE node_modules/perfect-debounce
+410 silly REMOVE node_modules/named-placeholders
+411 silly REMOVE node_modules/mysql2
+412 silly REMOVE node_modules/long
+413 silly REMOVE node_modules/lru.min
+414 silly REMOVE node_modules/json-schema-traverse
+415 silly REMOVE node_modules/isexe
+416 silly REMOVE node_modules/is-property
+417 silly REMOVE node_modules/http-status-codes
+418 silly REMOVE node_modules/hono
+419 silly REMOVE node_modules/graphmatch
+420 silly REMOVE node_modules/grammex
+421 silly REMOVE node_modules/graceful-fs
+422 silly CHANGE node_modules/giget
+423 silly REMOVE node_modules/get-port-please
+424 silly REMOVE node_modules/generate-function
+425 silly REMOVE node_modules/foreground-child
+426 silly REMOVE node_modules/fast-uri
+427 silly REMOVE node_modules/fast-deep-equal
+428 silly REMOVE node_modules/env-paths
+429 silly CHANGE node_modules/effect
+430 silly REMOVE node_modules/denque
+431 silly REMOVE node_modules/csstype
+432 silly REMOVE node_modules/cross-spawn
+433 silly REMOVE node_modules/chart.js
+434 silly CHANGE node_modules/c12
+435 silly ADD node_modules/c12/node_modules/dotenv
+436 silly CHANGE node_modules/c12/node_modules/readdirp
+437 silly CHANGE node_modules/c12/node_modules/chokidar
+438 silly REMOVE node_modules/better-result
+439 silly REMOVE node_modules/ajv
+440 silly REMOVE node_modules/aws-ssl-profiles
+441 verbose cwd C:\Users\anita\Documents\Codex\2026-06-11\files-mentioned-by-the-user-build\backend
+442 verbose os Windows_NT 10.0.26200
+443 verbose node v24.16.0
+444 verbose npm  v11.13.0
+445 verbose exit 0
+446 info ok

@@ -567,10 +567,7 @@ function AddressField({ label, value, onChange, onSelect, onClear, placeholder }
 function LeafletRouteMap({ routes = [], selectedRoute, startLocation, destinationLocation, currentLocation, transportMode = "car", activeTrip = false }) {
   return (
     <MapContainer center={[-27.4705, 153.026]} zoom={10} scrollWheelZoom>
-      <MapBounds routes={routes} startLocation={startLocation} destinationLocation={destinationLocation} currentLocation={currentLocation}
-              transportMode={form.transport_mode}
-              activeTrip={liveTripStarted}
-            />
+      <MapBounds routes={routes} startLocation={startLocation} destinationLocation={destinationLocation} currentLocation={currentLocation} />
       <TileLayer attribution="&copy; OpenStreetMap contributors" url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       {startLocation && <Marker position={[startLocation.lat, startLocation.lng]} icon={markerIcon}><Popup>Starting address: {startLocation.display_name}</Popup></Marker>}
       {destinationLocation && <Marker position={[destinationLocation.lat, destinationLocation.lng]} icon={markerIcon}><Popup>Destination: {destinationLocation.display_name}</Popup></Marker>}
@@ -690,7 +687,7 @@ function TripOptionsPanel({ selectedRoute, form, onStart, onSave }) {
       <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
         <div>
           <p className="text-sm font-semibold text-teal-700 dark:text-teal-300">Trip Options</p>
-          <h2 className="mt-1 flex items-center gap-2 text-2xl font-black"><TransportModeIcon mode={transportMode || "car"} /> {selectedRoute.name}</h2>
+          <h2 className="mt-1 flex items-center gap-2 text-2xl font-black"><TransportModeIcon mode={form.transport_mode} /> {selectedRoute.name}</h2>
           <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-600 dark:text-slate-300">{selectedRoute.reason}</p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row">

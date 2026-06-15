@@ -1,10 +1,10 @@
-import { TrafficCone } from "lucide-react";
+import smartTrafficLogo from "../assets/smarttraffic_logo.png";
 
 export default function Logo({ compact = false }) {
   return (
     <div className="flex items-center gap-3">
-      <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-teal-600 text-white shadow-lg shadow-teal-700/25">
-        <TrafficCone size={23} />
+      <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white shadow-lg shadow-teal-700/20 ring-1 ring-teal-100 dark:bg-slate-900 dark:ring-white/10">
+        <img src={smartTrafficLogo} alt="SmartTraffic AI logo" className="h-9 w-9 object-contain" />
       </div>
       {!compact && (
         <div>

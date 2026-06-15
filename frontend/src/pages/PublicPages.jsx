@@ -1,12 +1,53 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ArrowRight, BrainCircuit, CheckCircle2, Lock, Mail, MapPinned, Route, ShieldCheck, Sparkles, UserPlus } from "lucide-react";
+import { ArrowRight, CheckCircle2, Lock, Mail, MapPin, Navigation, Route, ShieldCheck, UserPlus } from "lucide-react";
 import Logo from "../components/Logo.jsx";
 import { AlertBox } from "../components/StateBox.jsx";
 import { useAuth } from "../context/AuthContext.jsx";
-import { getApiError } from "../services/api.js";
+import api, { getApiError } from "../services/api.js";
 
 export function Home() {
+  const [preview, setPreview] = useState({
+    status: "idle",
+    label: "Brisbane to Gold Coast",
+    detail: "Fallback preview. Allow location to show your local traffic preview.",
+  });
+
+  useEffect(() => {
+    if (!navigator.geolocation) {
+      setPreview({ status: "fallback", label: "Brisbane to Gold Coast", detail: "Location is not available in this browser. Showing fallback Queensland preview." });
+      return;
+    }
+    setPreview((current) => ({ ...current, status: "requesting", detail: "Allow location to show your live local traffic preview." }));
+    navigator.geolocation.getCurrentPosition(
+      async (position) => {
+        const { latitude, longitude } = position.coords;
+        let label = `${latitude.toFixed(4)}, ${longitude.toFixed(4)}`;
+        try {
+          const { data } = await api.get("/maps/reverse-geocode", { params: { lat: latitude, lng: longitude } });
+          label = data.suburb || data.city || data.location || data.formatted || label;
+        } catch {
+          try {
+            const key = import.meta.env.VITE_GEOAPIFY_API_KEY;
+            if (key) {
+              const response = await fetch(`https://api.geoapify.com/v1/geocode/reverse?lat=${latitude}&lon=${longitude}&apiKey=${key}`);
+              const reverse = await response.json();
+              const props = reverse.features?.[0]?.properties;
+              label = props?.suburb || props?.city || props?.county || props?.formatted || label;
+            }
+          } catch {
+            // Keep coordinate label if reverse geocoding is unavailable.
+          }
+        }
+        setPreview({ status: "live", label, detail: "Live local traffic preview based on your browser location." });
+      },
+      () => setPreview({ status: "denied", label: "Brisbane to Gold Coast", detail: "Location permission is needed to show your live local traffic preview. Showing fallback route instead." }),
+      { enableHighAccuracy: true, timeout: 8000, maximumAge: 60000 }
+    );
+  }, []);
+
+  const isFallback = preview.status === "denied" || preview.status === "fallback";
+
   return (
     <main>
       <section className="relative overflow-hidden">
@@ -33,8 +74,9 @@ export function Home() {
             <div className="rounded-2xl bg-slate-900 p-4 text-white">
               <div className="mb-4 flex items-center justify-between">
                 <div>
-                  <p className="text-sm text-teal-200">Live preview</p>
-                  <p className="text-xl font-black">Brisbane to Gold Coast</p>
+                  <p className="text-sm text-teal-200">{preview.status === "live" ? "Live local preview" : "Fallback preview"}</p>
+                  <p className="text-xl font-black">{preview.label}</p>
+                  <p className="mt-1 text-xs text-slate-300">{preview.detail}</p>
                 </div>
                 <Route className="text-teal-300" />
               </div>
@@ -43,14 +85,14 @@ export function Home() {
                 <div className="absolute left-8 top-10 h-4 w-4 -translate-x-1.5 rounded-full bg-white ring-4 ring-teal-400" />
                 <div className="absolute bottom-12 left-8 h-4 w-4 -translate-x-1.5 rounded-full bg-white ring-4 ring-rose-400" />
                 <div className="absolute left-20 top-12 w-56 rounded-2xl bg-white/10 p-4 backdrop-blur">
-                  <p className="text-sm font-bold text-teal-100">Recommended Route 1</p>
+                  <p className="text-sm font-bold text-teal-100">{isFallback ? "Fallback Route 1" : "Local preview"}</p>
                   <p className="mt-2 text-3xl font-black">47 min</p>
-                  <p className="mt-1 text-sm text-slate-300">Clear traffic, 94% confidence</p>
+                  <p className="mt-1 text-sm text-slate-300">Preview only until a route is selected</p>
                 </div>
                 <div className="absolute bottom-10 right-6 grid gap-2">
-                  {["M1 clear", "Gateway moderate", "Roadworks active"].map((item, index) => (
+                  {["Current area", "Traffic context", isFallback ? "Fallback location" : "Location allowed"].map((item, index) => (
                     <div key={item} className="rounded-xl bg-white/10 px-3 py-2 text-sm backdrop-blur">
-                      <span className={index === 0 ? "text-emerald-300" : index === 1 ? "text-amber-300" : "text-rose-300"}>●</span> {item}
+                      <span className={index === 0 ? "text-emerald-300" : index === 1 ? "text-amber-300" : "text-rose-300"}>•</span> {item}
                     </div>
                   ))}
                 </div>
@@ -62,7 +104,6 @@ export function Home() {
     </main>
   );
 }
-
 export function About() {
   const items = [
     ["Future travel planning", "Enter a trip date and time to preview likely congestion before you leave."],
@@ -190,3 +231,4 @@ function AuthPage({ mode }) {
 export const Login = () => <AuthPage mode="login" />;
 export const Signup = () => <AuthPage mode="signup" />;
 export const AdminLogin = () => <AuthPage mode="admin" />;
+

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { Circle, Heart, Loader2, MapPin, Navigation, Save, Search, ShieldAlert, Trash2, X } from "lucide-react";
+import { Bike, Bus, Car, Circle, Footprints, Heart, Loader2, MapPin, Navigation, Save, Search, ShieldAlert, Train, Trash2, X } from "lucide-react";
 import { CircleMarker, MapContainer, Marker, Polyline, Popup, TileLayer, useMap } from "react-leaflet";
 import L from "leaflet";
 import PageHeader from "../components/PageHeader.jsx";
@@ -391,10 +391,10 @@ export function MapPrediction() {
             </label>
             <label className="grid gap-2 text-sm font-semibold">
               Transport Mode
-              <select className="input" value={form.transport_mode} onChange={(event) => setForm({ ...form, transport_mode: event.target.value })}><option value="car">Car</option><option>Bus</option><option>Train and walk</option></select>
+              <div className="flex items-center gap-3"><TransportModeIcon mode={form.transport_mode} className="text-teal-600" /><select className="input" value={form.transport_mode} onChange={(event) => setForm({ ...form, transport_mode: event.target.value })}><option value="car">Car</option><option value="bus">Bus</option><option value="train">Train</option><option value="walking">Walking</option><option value="cycling">Cycling</option></select></div>
             </label>
             <button className="btn-primary" type="button" onClick={() => generatePrediction()} disabled={isGenerating}>
-              {isGenerating ? <Loader2 className="animate-spin" size={18} /> : <Navigation size={18} />} {isGenerating ? "Generating..." : "Generate AI Prediction"}
+              {isGenerating ? <Loader2 className="animate-spin" size={18} /> : <Navigation size={18} />} {isGenerating ? "Generating..." : "Traffic Prediction"}
             </button>
           </div>
           <div className="mt-5 rounded-2xl bg-slate-50 p-4 text-sm leading-6 dark:bg-white/5">
@@ -422,7 +422,9 @@ export function MapPrediction() {
               selectedRoute={selectedRoute}
               startLocation={startLocation}
               destinationLocation={destinationLocation}
-              currentLocation={null}
+              currentLocation={currentLocation}
+              transportMode={form.transport_mode}
+              activeTrip={liveTripStarted}
             />
           </div>
           {predicted && (
@@ -441,12 +443,12 @@ export function MapPrediction() {
                   </div>
                 </div>
               </div>
-              <PredictionCards routes={routeCards} selectedRoute={selectedRoute} onChooseRoute={chooseRoute} />
+              <PredictionCards routes={routeCards} selectedRoute={selectedRoute} onChooseRoute={chooseRoute} transportMode={form.transport_mode} />
               {selectedRoute && (
                 <TripOptionsPanel selectedRoute={selectedRoute} form={form} onStart={startLiveTrip} onSave={saveForLater} />
               )}
               {selectedRoute && liveTripVisible && (
-                <LiveTripPanel selectedRoute={selectedRoute} selectedRouteMap={selectedRouteMap} currentLocation={currentLocation} liveTripStarted={liveTripStarted} liveStatus={liveStatus} onStop={stopTrip} />
+                <LiveTripPanel selectedRoute={selectedRoute} selectedRouteMap={selectedRouteMap} currentLocation={currentLocation} liveTripStarted={liveTripStarted} liveStatus={liveStatus} transportMode={form.transport_mode} onStop={stopTrip} />
               )}
             </>
           )}
@@ -562,10 +564,13 @@ function AddressField({ label, value, onChange, onSelect, onClear, placeholder }
   );
 }
 
-function LeafletRouteMap({ routes = [], selectedRoute, startLocation, destinationLocation, currentLocation }) {
+function LeafletRouteMap({ routes = [], selectedRoute, startLocation, destinationLocation, currentLocation, transportMode = "car", activeTrip = false }) {
   return (
     <MapContainer center={[-27.4705, 153.026]} zoom={10} scrollWheelZoom>
-      <MapBounds routes={routes} startLocation={startLocation} destinationLocation={destinationLocation} currentLocation={currentLocation} />
+      <MapBounds routes={routes} startLocation={startLocation} destinationLocation={destinationLocation} currentLocation={currentLocation}
+              transportMode={form.transport_mode}
+              activeTrip={liveTripStarted}
+            />
       <TileLayer attribution="&copy; OpenStreetMap contributors" url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       {startLocation && <Marker position={[startLocation.lat, startLocation.lng]} icon={markerIcon}><Popup>Starting address: {startLocation.display_name}</Popup></Marker>}
       {destinationLocation && <Marker position={[destinationLocation.lat, destinationLocation.lng]} icon={markerIcon}><Popup>Destination: {destinationLocation.display_name}</Popup></Marker>}
@@ -573,6 +578,11 @@ function LeafletRouteMap({ routes = [], selectedRoute, startLocation, destinatio
         <CircleMarker center={[currentLocation.lat, currentLocation.lng]} radius={9} pathOptions={{ color: "#0f766e", fillColor: "#14b8a6", fillOpacity: 1 }}>
           <Popup>Current location</Popup>
         </CircleMarker>
+      )}
+      {activeTrip && (currentLocation || startLocation) && (
+        <Marker position={[currentLocation?.lat || startLocation.lat, currentLocation?.lng || startLocation.lng]} icon={vehicleMarkerIcon(transportMode)}>
+          <Popup>{transportLabel(transportMode)} trip position</Popup>
+        </Marker>
       )}
       {routes.map((route) => {
         const isSelected = selectedRoute?.id === route.id;
@@ -593,6 +603,39 @@ function LeafletRouteMap({ routes = [], selectedRoute, startLocation, destinatio
   );
 }
 
+
+function TransportModeIcon({ mode, size = 18, className = "" }) {
+  const Icon = transportIconComponent(mode);
+  return <Icon size={size} className={className} aria-hidden="true" />;
+}
+
+function transportIconComponent(mode = "") {
+  const value = String(mode).toLowerCase();
+  if (value.includes("bus")) return Bus;
+  if (value.includes("train")) return Train;
+  if (value.includes("walk")) return Footprints;
+  if (value.includes("cycl") || value.includes("bike")) return Bike;
+  return Car;
+}
+
+function transportLabel(mode = "") {
+  const value = String(mode).toLowerCase();
+  if (value.includes("bus")) return "Bus";
+  if (value.includes("train")) return "Train";
+  if (value.includes("walk")) return "Walking";
+  if (value.includes("cycl") || value.includes("bike")) return "Cycling";
+  return "Car";
+}
+
+function vehicleMarkerIcon(mode) {
+  const label = transportLabel(mode).slice(0, 1);
+  return L.divIcon({
+    className: "smarttraffic-vehicle-marker",
+    html: `<div style="width:34px;height:34px;border-radius:999px;background:#fff;border:3px solid #0d9488;box-shadow:0 4px 16px rgba(15,23,42,.28);display:flex;align-items:center;justify-content:center;color:#0f766e;font-weight:900;font-size:14px;">${label}</div>`,
+    iconSize: [34, 34],
+    iconAnchor: [17, 17],
+  });
+}
 function MapBounds({ routes, startLocation, destinationLocation, currentLocation }) {
   const map = useMap();
   useEffect(() => {
@@ -608,7 +651,7 @@ function MapBounds({ routes, startLocation, destinationLocation, currentLocation
   return null;
 }
 
-function PredictionCards({ routes = getRouteCards(null), selectedRoute = null, onChooseRoute = null } = {}) {
+function PredictionCards({ routes = getRouteCards(null), selectedRoute = null, onChooseRoute = null, transportMode = "car" } = {}) {
   return (
     <div className="grid gap-4 lg:grid-cols-3">
       {routes.map((route) => {
@@ -616,7 +659,7 @@ function PredictionCards({ routes = getRouteCards(null), selectedRoute = null, o
         return (
         <div key={route.id} className={`panel p-5 transition ${isSelected ? "ring-4 ring-teal-500 shadow-xl shadow-teal-600/15" : route.recommended ? "ring-2 ring-teal-500" : ""}`}>
           <div className="mb-3 flex items-center justify-between gap-3">
-            <h3 className="font-black">{route.name}</h3>
+            <h3 className="flex items-center gap-2 font-black"><TransportModeIcon mode={transportMode} size={16} /> {route.name}</h3>
             <span className="h-4 w-4 rounded-full" style={{ background: route.color }} />
           </div>
           <p className="text-sm font-semibold text-slate-700 dark:text-slate-200">{route.level}</p>
@@ -647,11 +690,11 @@ function TripOptionsPanel({ selectedRoute, form, onStart, onSave }) {
       <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
         <div>
           <p className="text-sm font-semibold text-teal-700 dark:text-teal-300">Trip Options</p>
-          <h2 className="mt-1 text-2xl font-black">{selectedRoute.name}</h2>
+          <h2 className="mt-1 flex items-center gap-2 text-2xl font-black"><TransportModeIcon mode={form.transport_mode} /> {selectedRoute.name}</h2>
           <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-600 dark:text-slate-300">{selectedRoute.reason}</p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row">
-          <button type="button" className="btn-primary shrink-0" onClick={onStart}>Start Now</button>
+          <button type="button" className="btn-primary shrink-0" onClick={onStart}><Navigation size={18} /> Start Trip</button>
           <button type="button" className="btn-secondary shrink-0" onClick={onSave}>Save for Later</button>
         </div>
       </div>
@@ -660,7 +703,7 @@ function TripOptionsPanel({ selectedRoute, form, onStart, onSave }) {
         <div className="rounded-2xl bg-slate-50 p-4 dark:bg-white/5"><strong>{form.destination_address}</strong><br />To address</div>
         <div className="rounded-2xl bg-slate-50 p-4 dark:bg-white/5"><strong>{form.travel_date}</strong><br />Travel date</div>
         <div className="rounded-2xl bg-slate-50 p-4 dark:bg-white/5"><strong>{form.travel_time}</strong><br />Travel time</div>
-        <div className="rounded-2xl bg-slate-50 p-4 dark:bg-white/5"><strong>{selectedRoute.time}</strong><br />Estimated travel time</div>
+        <div className="rounded-2xl bg-slate-50 p-4 dark:bg-white/5"><strong className="inline-flex items-center gap-2"><TransportModeIcon mode={form.transport_mode} size={16} /> {selectedRoute.time}</strong><br />Estimated travel time</div>
         <div className="rounded-2xl bg-slate-50 p-4 dark:bg-white/5"><strong>{selectedRoute.level}</strong><br />Traffic condition</div>
         <div className="rounded-2xl bg-slate-50 p-4 dark:bg-white/5"><strong>{selectedRoute.delay}</strong><br />Estimated delay</div>
         <div className="rounded-2xl bg-slate-50 p-4 dark:bg-white/5"><strong>{selectedRoute.distance}</strong><br />Distance</div>
@@ -674,7 +717,7 @@ function TripOptionsPanel({ selectedRoute, form, onStart, onSave }) {
   );
 }
 
-function LiveTripPanel({ selectedRoute, selectedRouteMap, currentLocation, liveTripStarted, liveStatus, onStop }) {
+function LiveTripPanel({ selectedRoute, selectedRouteMap, currentLocation, liveTripStarted, liveStatus, transportMode, onStop }) {
   return (
     <div className="panel overflow-hidden">
       <div className="grid gap-0 xl:grid-cols-[1.2fr_0.8fr]">
@@ -685,11 +728,13 @@ function LiveTripPanel({ selectedRoute, selectedRouteMap, currentLocation, liveT
             startLocation={{ lat: selectedRouteMap.points[0][0], lng: selectedRouteMap.points[0][1] }}
             destinationLocation={{ lat: selectedRouteMap.points[selectedRouteMap.points.length - 1][0], lng: selectedRouteMap.points[selectedRouteMap.points.length - 1][1] }}
             currentLocation={currentLocation}
+            transportMode={transportMode || "car"}
+            activeTrip={liveTripStarted}
           />
         </div>
         <div className="p-6">
           <p className="text-sm font-semibold text-teal-700 dark:text-teal-300">Live Trip Map</p>
-          <h2 className="mt-1 text-2xl font-black">{selectedRoute.name}</h2>
+          <h2 className="mt-1 flex items-center gap-2 text-2xl font-black"><TransportModeIcon mode={form.transport_mode} /> {selectedRoute.name}</h2>
           <p className="mt-3 text-sm leading-6 text-slate-500 dark:text-slate-400">
             {liveStatus || `You selected ${selectedRoute.name}. Live navigation is ready.`}
           </p>
@@ -974,3 +1019,8 @@ export function SettingsPage() {
 export function UserNotFound() {
   return <EmptyBox text="This user page is not available." />;
 }
+
+
+
+
+

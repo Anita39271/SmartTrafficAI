@@ -690,7 +690,7 @@ function TripOptionsPanel({ selectedRoute, form, onStart, onSave }) {
       <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
         <div>
           <p className="text-sm font-semibold text-teal-700 dark:text-teal-300">Trip Options</p>
-          <h2 className="mt-1 flex items-center gap-2 text-2xl font-black"><TransportModeIcon mode={form.transport_mode} /> {selectedRoute.name}</h2>
+          <h2 className="mt-1 flex items-center gap-2 text-2xl font-black"><TransportModeIcon mode={transportMode || "car"} /> {selectedRoute.name}</h2>
           <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-600 dark:text-slate-300">{selectedRoute.reason}</p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row">
@@ -734,7 +734,7 @@ function LiveTripPanel({ selectedRoute, selectedRouteMap, currentLocation, liveT
         </div>
         <div className="p-6">
           <p className="text-sm font-semibold text-teal-700 dark:text-teal-300">Live Trip Map</p>
-          <h2 className="mt-1 flex items-center gap-2 text-2xl font-black"><TransportModeIcon mode={form.transport_mode} /> {selectedRoute.name}</h2>
+          <h2 className="mt-1 flex items-center gap-2 text-2xl font-black"><TransportModeIcon mode={transportMode || "car"} /> {selectedRoute.name}</h2>
           <p className="mt-3 text-sm leading-6 text-slate-500 dark:text-slate-400">
             {liveStatus || `You selected ${selectedRoute.name}. Live navigation is ready.`}
           </p>
